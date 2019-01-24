@@ -4,8 +4,26 @@
 
 @import '~$scss/variables';
 @import '~$fonts/montserrat/montserrat';
+@import '~$scss/typography';
 @import '~$scss/hero';
+
+* {
+    box-sizing: border-box;
+}
 
 body {
     font-family: $base-font-family;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 75rem;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    width: 100%;
 }

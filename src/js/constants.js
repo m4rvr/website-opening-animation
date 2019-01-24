@@ -9,8 +9,8 @@
  * @type { Object.<string, number> }
  */ 
 const AnimationDurations = {
-    SLOW: .7,
-    DEFAULT: .5
+    SLOW: .6,
+    DEFAULT: .3
 }
 
 export {

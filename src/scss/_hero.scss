@@ -12,15 +12,14 @@
 .hero__video {
     opacity: 0;
     position: relative;
-    padding-bottom: 56.25%;
+    height: 100%;
 
     .hero__video-player {
         position: absolute;
         left: 0;
         top: 0;
-        width: 100%;
-        height: 100%;
         z-index: 3;
+        object-fit: cover;
     }
 
     .hero__video-headline {
@@ -32,7 +31,8 @@
         align-items: center;
         justify-content: center;
         color: $white;
-        font-size: 4rem;
+        width: 100%;
+        height: 100%;
     }
 }
 
@@ -46,4 +46,86 @@
     z-index: 20;
     transform: scaleX(0);
     transform-origin: left center;
+}
+
+.hero__content {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+
+    .hero__content-side,
+    .hero__content-main {
+        height: 100%;
+        transform: scaleX(0);
+        transform-origin: left center;
+    }
+    
+    .hero__content-side {
+        width: 30%;
+        background: $black;
+    }
+
+    .hero__content-main {
+        width: 70%;
+        background: $white;
+    }
+}
+
+.hero__content-inner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    .hero__content-image {
+        width: 56%;
+        padding-bottom: 56%;
+        position: relative;
+        overflow: hidden;
+
+        .hero__content-image-mask {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        #hero__content-image-clip-path rect {
+            transform-origin: left center;
+        }
+
+        img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            clip-path: url(#hero__content-image-clip-path);
+        }
+
+        &.revealed #hero__content-image-clip-path rect {
+            transform: scaleX(1);
+        }
+    }
+
+    .hero__content-text {
+        width: 44%;
+        padding: 5%;
+        transform: translateY(-20%);
+        opacity: 0;
+
+        .badge {
+            text-transform: uppercase;
+            background: $medium-gray;
+            color: $white;
+            font-size: .75rem;
+            padding: .3rem .5rem;
+        }
+    }
 }
