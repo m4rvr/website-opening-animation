@@ -1,0 +1,11 @@
+/**
+ * Entry file for SCSS
+ */
+
+@import '~$scss/variables';
+@import '~$fonts/montserrat/montserrat';
+@import '~$scss/hero';
+
+body {
+    font-family: $base-font-family;
+}
