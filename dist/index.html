@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Website Opening Animation</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <link href="main.css" rel="stylesheet"></head>
+    <body>
+        <div id="hero">
+            <div class="hero__video">
+                <video width="100%" height="100%" class="hero__video-player" muted loop>
+                    <source src="assets/city.mp4" type="video/mp4">
+                </video>
+                <div class="hero__video-headline">
+                    <h1>New York City</h1>
+                </div>
+            </div>
+            <div class="hero__content">
+                <div class="hero__content-side"></div>
+                <div class="hero__content-main"></div>
+                <div class="hero__content-inner">
+                    <div class="container">
+                        <div class="hero__content-image">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="hero__content-image-mask">
+                                <defs>
+                                    <clipPath id="hero__content-image-clip-path">
+                                        <rect x="0" y="0" width="100%" height="100%" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <img src="./assets/b3ad23dab9d36a966e987a64bad12d8f.jpg" />
+                        </div>
+                        <div class="hero__content-text">
+                            <p>
+                                <span class="badge">Editorial</span>
+                            </p>
+                            <h2>Our story</h2>
+                            <p>read the story of four girls who have carved out their space in the world.</p>
+                            <p>
+                                <a href="/">read the full story</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__curtain"></div>
+        </div>
+    <script type="text/javascript" src="main.js"></script></body>
+</html>
