@@ -29,6 +29,9 @@ const EASING = Expo.easeInOut
  * Hero Class 
  */
 class Hero {
+    /**
+     * Handles the 'ready' event
+     */
     onReady() {
         this._element = document.querySelector(Selector.HERO)
         this._video = this._element.querySelector(Selector.VIDEO)
@@ -44,12 +47,18 @@ class Hero {
         this.showCurtain()
     }
 
+    /**
+     * Initializes the Hero
+     */
     _initialize() {
         TweenMax.set(this._contentImageMask, {
             scaleX: 0
         })
     }
 
+    /**
+     * Shows the curtain
+     */
     showCurtain() {
         const timeline = new TimelineMax()
 
@@ -83,6 +92,9 @@ class Hero {
         )
     }
 
+    /**
+     * Shows the content
+     */
     showContent() {
         const timeline = new TimelineMax()
 
@@ -118,6 +130,9 @@ class Hero {
         )
     }
 
+    /**
+     * Hides the headline
+     */
     hideHeadline() {
         TweenMax.to(this._videoHeadline, AnimationDurations.SLOW, {
             opacity: 0,
