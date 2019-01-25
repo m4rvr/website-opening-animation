@@ -27,3 +27,21 @@ img {
     align-items: center;
     width: 100%;
 }
+
+.imprint-privacy-links {
+    position: absolute;
+    right: .6rem;
+    bottom: .6rem;
+    font-size: .65rem;
+    z-index: 25;
+    
+    a {
+        color: #aaa;
+        font-weight: 400;
+        text-transform: none;
+
+        &:not(:last-of-type) {
+            margin-right: .5rem;
+        }
+    }
+}
