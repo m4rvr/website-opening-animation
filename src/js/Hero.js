@@ -14,7 +14,7 @@ const Selector = {
     CURTAIN: '.hero__curtain',
     CONTENT_SIDE: '.hero__content-side',
     CONTENT_MAIN: '.hero__content-main',
-    CONTENT_IMAGE_MASK: '#hero__content-image-clip-path',
+    CONTENT_IMAGE_MASK: '#hero__content-image-clip-path rect',
     CONTENT_TEXT: '.hero__content-text'
 }
 
@@ -42,18 +42,8 @@ class Hero {
         this._contentMain = this._element.querySelector(Selector.CONTENT_MAIN)
         this._contentImageMask = this._element.querySelector(Selector.CONTENT_IMAGE_MASK)
         this._contentText = this._element.querySelector(Selector.CONTENT_TEXT)
-
-        this._initialize()
+        
         this.showCurtain()
-    }
-
-    /**
-     * Initializes the Hero
-     */
-    _initialize() {
-        TweenMax.set(this._contentImageMask, {
-            scaleX: 0
-        })
     }
 
     /**
@@ -108,7 +98,9 @@ class Hero {
         timeline.add(
             TweenMax.to(this._contentImageMask, AnimationDurations.SLOW, {
                 delay: .4,
-                scaleX: 1,
+                attr: {
+                    width: '100%'
+                },
                 ease: EASING
             }), 0
         )
