@@ -3,6 +3,8 @@
 
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org) [![node](https://img.shields.io/badge/node-%3E%3D%2010.15.0-brightgreen.svg?style=flat-square)](https://nodejs.org/en) [![webpack](https://img.shields.io/badge/webpack-%3E%3D%204.28.2-blue.svg?style=flat-square)](https://webpack.js.org/) [![babel](https://img.shields.io/badge/babel-%3E%3D%207.2.2-yellow.svg?style=flat-square)](https://babeljs.io/)
 
+See the demo here: [Demo](https://marvinrudolph.github.io/website-opening-animation/)
+
 ## Usage
 You can use the generated minified files OR your can setup the development environment and build things on your own.
 
