@@ -3,7 +3,7 @@
  */
 
 @import '~$scss/variables';
-@import '~$fonts/montserrat/montserrat';
+@import '~$scss/fonts';
 @import '~$scss/typography';
 @import '~$scss/hero';
 
@@ -28,6 +28,7 @@ img {
     width: 100%;
 }
 
+// Do NOT copy that. It is for linking my imprint & privacy
 .imprint-privacy-links {
     position: absolute;
     right: .6rem;
